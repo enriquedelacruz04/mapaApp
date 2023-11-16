@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#map {
+  height: 700px; /* The height is 400 pixels */
+  width: 100%; /* The width is the width of the web page */
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    display: grid;
+    grid-template-columns: min-content minmax(0, 1fr);
+  }
+}
+
+.transition--hover {
+  @apply transition-all duration-300 ease-out;
+}
+
+.transition--transform {
+  @apply transition-all duration-500 ease-in;
+}
+
+.transition--colors {
+  @apply transition-colors duration-100 ease-out;
+}
+
+.transition--transform-layout {
+  @apply transition-all duration-500 ease-in;
+}
+
+#map {
+  height: 700px;
+  width: "100%";
+}
